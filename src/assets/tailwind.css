@@ -1,0 +1,74 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+input[type="radio"]{
+    display: none;
+
+}
+
+.star{
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+
+.spinner:before{
+    content: '';
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    height: 80px;
+    width: 90px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: limegreen;
+    border-bottom-color: limegreen;
+    animation: spinner 0.7s ease infinite;
+
+
+}
+
+div .spinner{
+  top: 50%;
+  left:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div .spinner h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes spinner {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.style{
+    background: url('../utils/img/error2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.is-invalid{
+    @apply  border-red-500;
+}
+
+
+@import "tailwindcss/utilities";
+
+
+
